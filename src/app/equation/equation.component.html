@@ -1,0 +1,12 @@
+<form [formGroup]="mathForm">
+    <div class="expression">
+        {{ a }} +{{ b }}  = 
+    </div> 
+    <div class="solution">
+        <input [ngClass]="{highlightWrong: mathForm.invalid, highlightRight: mathForm.valid}" formControlName="answer" > 
+    </div>
+</form>
+
+<div class="timer">
+    <h2>{{ secondsPerSolution | number: '1.1-3' }} seconds</h2>
+</div>
